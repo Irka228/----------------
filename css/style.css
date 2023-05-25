@@ -1,0 +1,425 @@
+@charset "UTF-8";
+/* Указываем box sizing */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: "Montserrat";
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.container {
+  width: 80vw;
+  margin: 0 auto;
+  position: inherit;
+  display: inherit;
+}
+
+.main {
+  padding-top: 47px;
+  background: url("../assets/img/Bg.jpg") no-repeat center top;
+  background-size: cover;
+  color: white;
+  font-weight: 400;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+.nav__logo {
+  font-size: 21px;
+  font-weight: 500px;
+}
+.nav__attributes {
+  display: flex;
+  justify-content: space-between;
+}
+.nav__location {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 69px;
+}
+.nav__location-text {
+  font-size: 16px;
+  letter-spacing: 0.08em;
+}
+.nav__location-icon {
+  margin-right: 15px;
+}
+.nav__contacts {
+  display: flex;
+}
+.nav__contacts-number {
+  font-weight: 700;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  letter-spacing: 1px;
+  line-height: 20px;
+}
+.nav__contacts-number-desc {
+  font-style: 13px;
+}
+.nav__contacts-icon {
+  margin-right: 13px;
+}
+.nav__contacts-iconspan i {
+  display: block;
+  width: 19px;
+  height: 19px;
+}
+
+.pretitle {
+  color: #2E363E;
+  display: inline-block;
+  width: auto;
+  height: 32px;
+  background-color: #F2F6FA;
+  padding: 10px 23px;
+  font-size: 11px;
+  font-weight: 500;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  line-height: normal;
+}
+
+.offer {
+  padding-top: 17vh;
+  width: 40em;
+  padding-bottom: 65vh;
+}
+.offer__title {
+  letter-spacing: -1px;
+  margin-bottom: 24px;
+  font-size: 48px;
+}
+.offer__text {
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+.offer__btn-wrapper {
+  display: flex;
+  margin-top: 40px;
+  align-items: center;
+}
+.offer__btn {
+  margin-right: 20px;
+  width: 270px;
+  height: 60px;
+  padding: 18px 46px;
+  background-color: #FED84C;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 18px;
+  color: black;
+  text-decoration: none;
+}
+
+.catalog {
+  background-color: #fff;
+  background: url("../assets/img/листики.png") no-repeat center top;
+  z-index: 10;
+}
+.catalog__items {
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+}
+.catalog__title {
+  font-size: 48px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 80px;
+}
+.catalog__item {
+  transition: 0.2s ease;
+  border-radius: 20px;
+  background-color: rgb(248, 245, 245);
+  width: 350px;
+  height: 550px;
+  margin-bottom: 25px;
+}
+.catalog__item:hover {
+  transform: scale(1.05);
+}
+.catalog__item-img {
+  margin-right: -44px;
+}
+.catalog__item-title {
+  margin-top: 50px;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 24px;
+}
+.catalog__item-about {
+  margin-left: 44px;
+  width: 250px;
+}
+.catalog__item-description {
+  font-weight: 300;
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+.catalog__item-price {
+  font-size: 24px;
+  letter-spacing: 1px;
+  margin-bottom: 34px;
+}
+.catalog__item-btn {
+  text-decoration: none;
+  font-size: 18px;
+  padding: 20px 40px;
+  background-color: #FED84C;
+  color: black;
+  border-radius: 10px;
+}
+
+.content {
+  background: url("../assets/img/Контент.png") no-repeat center top;
+  background-size: cover;
+  position: relative;
+  padding-top: 423px;
+  height: 150vh;
+}
+.content__inner {
+  width: 500px;
+  float: right;
+  color: white;
+}
+.content__inner-title {
+  font-size: 48px;
+  font-weight: 400;
+  letter-spacing: 0.09px;
+}
+.content__inner-text {
+  font-weight: 300;
+  font-size: 21px;
+  margin-bottom: 40px;
+}
+
+.about__inner {
+  display: flex;
+  justify-content: space-around;
+}
+.about__inner-description {
+  width: 580px;
+}
+.about__inner-img {
+  background: url("../assets/img/woman.png") no-repeat center top;
+  background-size: contain;
+  height: 800px;
+  width: 580px;
+  position: relative;
+}
+.about__inner-description {
+  margin-top: 110px;
+}
+.about__img-description {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  flex-direction: column;
+  bottom: 90px;
+  left: -20px;
+}
+.about__img-description-name {
+  background-color: #2E363E;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 400;
+  padding: 15px 24px;
+  color: white;
+  transform: skew(-10deg, 0);
+  border-radius: 10px;
+}
+.about__img-description-position {
+  background-color: #F2F6FA;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 30;
+  padding: 15px 24px;
+  color: #2E363E;
+  transform: skew(-10deg, 0);
+  border-radius: 10px;
+}
+
+.description__title {
+  font-weight: 400;
+  font-size: 48px;
+  margin-bottom: 36px;
+}
+.description__advantages {
+  list-style: disc !important;
+  font-size: 16px;
+  line-height: 20px;
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 70px;
+}
+.description__advantages-item {
+  display: block;
+  margin-bottom: 30px;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+.description__advantages-item::before {
+  position: absolute;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  content: " ";
+  background-color: #5d6afb;
+  left: -1px;
+  margin-top: 10px;
+}
+
+.feedback__item {
+  background-color: white;
+  padding: 40px 80px;
+  display: flex;
+  gap: 54px;
+  width: 70vw;
+  transition: 0.7s;
+}
+.feedback__item-description {
+  width: 55%;
+}
+.feedback__description__title {
+  margin-top: 24px;
+  font-size: 30px;
+  font-weight: 400;
+}
+.feedback__description__text {
+  margin-top: 24px;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.description__item-photo-title {
+  margin-top: 30px;
+  font-size: 21px;
+  text-align: center;
+}
+.description__item-photo-sity {
+  text-align: center;
+}
+
+.feedbacks {
+  background: url("../assets/img/feedback_bg.png") no-repeat center top;
+  background-color: #081130;
+  background-size: cover;
+  padding-bottom: 250px;
+}
+.feedbacks__title {
+  color: white;
+  padding-top: 252px;
+  font-size: 48px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.slick-slide .feedback__item {
+  opacity: 0.2;
+  transform: scale(0.85);
+}
+
+.slick-center .feedback__item {
+  opacity: 1;
+  transform: translateY(0px);
+  transform: translateX(0px);
+}
+
+.slider-arrows {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 30px;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.slider__arrow {
+  display: inline-block;
+  background-color: #FED84C;
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  padding: 12px 23px;
+}
+
+.feedbacks__slider {
+  margin-top: 70px;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,59 @@
+.catalog{
+    
+    background-color: #fff;
+        background: url("/assets/img/листики.png") no-repeat center top;
+        z-index: 10;
+    &__items{
+        justify-content: space-around;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__title{
+        font-size: 48px;
+        font-weight: 400;
+        text-align: center;
+        margin-bottom: 80px;
+    }
+    &__item{
+        &:hover{
+            transform: scale(1.05);
+        }
+        transition: 0.2s ease;
+        border-radius: 20px;
+        background-color: rgb(248, 245, 245);
+        width: 350px;
+        height: 550px;
+        margin-bottom: 25px;
+        &-img{
+            margin-right: -44px;
+        }
+        &-title{
+            margin-top:50px;
+            margin-bottom:12px;
+            font-weight: 700;
+            font-size: 24px;
+        }
+        &-about{
+            margin-left: 44px;
+            width: 250px;
+        }
+        &-description{
+            font-weight: 300;
+            font-size: 16px;
+            margin-bottom: 24px;
+        }
+        &-price{
+            font-size: 24px;
+            letter-spacing: 1px;
+            margin-bottom: 34px;
+        }
+        &-btn{
+            text-decoration: none;
+            font-size: 18px;
+            padding: 20px 40px;
+            background-color: #FED84C;
+            color: black;
+            border-radius: 10px;
+        }
+    }  
+}

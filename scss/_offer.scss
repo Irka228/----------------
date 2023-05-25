@@ -1,0 +1,108 @@
+.container{
+    width: 80vw;
+    margin: 0 auto;
+    position: inherit;
+    display: inherit;
+}
+.main{
+    padding-top: 47px;
+    background: url("/assets/img/Bg.jpg") no-repeat center top;
+    background-size: cover;
+    color: white;
+    font-weight: 400;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    &__logo{
+        font-size: 21px;
+        font-weight: 500px;
+    }
+    &__attributes{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__location{
+        display: flex;
+        justify-content: space-between;
+        margin-right: 69px;
+        &-text{
+            font-size: 16px;
+            letter-spacing: 0.08em;
+        }
+        &-icon{
+            margin-right: 15px;
+        }
+    }
+    &__contacts{
+        display: flex;
+
+        &-number{
+            font-weight: 700;
+            font-size: 20px;
+            text-decoration: none;
+            color: white;
+            letter-spacing: 1px;
+            line-height: 20px;
+
+            &-desc{
+                font-style: 13px;
+            }
+        }
+        &-icon{
+            margin-right: 13px;
+
+            &span i{
+                display: block;
+                width: 19px;
+                height: 19px;
+            }
+        }
+    }
+}
+.pretitle{
+    color: #2E363E;
+    display: inline-block;
+    width: auto;
+    height: 32px;
+    background-color: #F2F6FA;
+    padding: 10px 23px;
+    font-size: 11px;
+    font-weight: 500;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    line-height: normal;
+}
+.offer{
+    padding-top: 17vh;
+    width: 40em;
+    padding-bottom: 65vh;
+
+    
+    &__title{
+        letter-spacing: -1px;
+        margin-bottom: 24px;
+        font-size: 48px;
+    }
+    &__text{
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+    &__btn-wrapper{
+        display: flex;
+        margin-top: 40px;
+        align-items: center;
+    }
+    &__btn{
+        margin-right: 20px;
+        width: 270px;
+        height: 60px;
+        padding: 18px 46px;
+        background-color:#FED84C;
+        border-radius: 8px;
+        font-weight: 500;
+        font-size: 18px;
+        color: black;
+        text-decoration: none;
+    }
+}

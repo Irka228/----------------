@@ -1,0 +1,107 @@
+.content {
+    background: url(/assets/img/Контент.png) no-repeat center top;
+    background-size: cover;
+    position: relative;
+    padding-top: 423px;
+    height: 150vh;
+    &__inner {
+        width: 500px;
+        float: right;
+        color: white;
+        &-title {
+            font-size: 48px;
+            font-weight: 400;
+            letter-spacing: 0.09px;
+        }
+        &-text {
+            font-weight: 300;
+            font-size: 21px;
+            margin-bottom: 40px;
+        }
+    }
+}
+.about {
+    &__inner {
+        display: flex;
+        justify-content: space-around;
+        &-description {
+            width: 580px;
+        }
+        &-img{
+            background: url(/assets/img/woman.png) no-repeat center top;
+            background-size: contain;
+            height: 800px;
+            width: 580px;
+            position: relative;
+            
+            
+        }
+        
+        &-description{
+            margin-top: 110px;
+        }
+    }
+    &__img{
+        &-description{
+            display: flex;
+            align-items: center;
+            position: absolute;
+            flex-direction: column;
+            bottom: 90px;
+            left: -20px;
+            &-name{
+                background-color: #2E363E;
+                display: inline-block;
+                font-size: 24px;
+                font-weight: 400;
+                padding: 15px 24px;
+                color: white;
+                transform: skew(-10deg,0);
+                border-radius: 10px;
+            }
+            &-position{
+                background-color: #F2F6FA;
+                display: inline-block;
+                font-size: 18px;
+                font-weight: 30;
+                padding: 15px 24px;
+                color: #2E363E;
+                transform: skew(-10deg,0);
+                border-radius: 10px;
+            }
+        }
+    }
+}
+.description {
+    &__title {
+        font-weight: 400;
+        font-size: 48px;
+        margin-bottom: 36px;
+    }
+    &__advantages {
+        list-style: disc !important;
+        font-size: 16px;
+        line-height: 20px;
+        padding-left: 20px;
+        position: relative;
+        margin-bottom: 70px;
+        &-item{
+            display: block;
+            margin-bottom: 30px;
+            font-size: 18px;
+            letter-spacing: 1px;
+
+        }
+        &-item::before {
+            position: absolute;
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50px;
+            content: ' ';
+            background-color: #5d6afb;
+            left: -1px;
+            margin-top: 10px;
+        }
+    }
+}
